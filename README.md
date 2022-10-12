@@ -10,6 +10,8 @@
 
 - Leonardo Brenes Seas
 
+- Carlos Cárdenas
+
 **Pasos utilizados para preparar el entorno del ambiente de pruebas:**
 
 Primero se descargó e instalo el JDK, maven y Chromeweb driver, con sus respectivas guías de instalación.
