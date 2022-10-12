@@ -1,6 +1,12 @@
 # CalidadSoftware
 ## Proyecto Calidad Software
 
+![image](https://user-images.githubusercontent.com/115116699/195243906-1e1bd628-d5a1-4f3b-84e1-83037c6acfe6.png)
+
+
+#### Profesor ####
+
+- Lic. Christopher Seas Solano
 
 **Integrantes:**
 
@@ -26,4 +32,5 @@ Es importante recordar que este framework es solo un pequeño paso para la autom
 
 
 
+![image](https://user-images.githubusercontent.com/115116699/195243859-615f4a55-25f0-4f6c-ad6f-598845502504.png)
 
