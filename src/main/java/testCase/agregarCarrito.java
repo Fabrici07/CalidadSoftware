@@ -43,6 +43,7 @@ public class agregarCarrito {
             agregar.click();
             System.out.println("Dio click en agregar al carrito");
 
+
         } catch (Exception e) {
             System.out.println("Fallo agregando el producto al carrito");
             driver.close();
@@ -51,26 +52,51 @@ public class agregarCarrito {
             WebElement irCarrito = driver.findElement(By.xpath("/html/body/div[4]/div[3]/div/div/div[1]/div[3]/div[1]/div[2]/div[3]/form/span/span/input"));
             irCarrito.click();
             System.out.println("Dio click en ir al carrito");
+            TimeUnit.SECONDS.sleep(3);
 
         } catch (Exception e) {
             System.out.println("Fallo agregando en ir al carrito");
             driver.close();
         }
+        try {
+
+            WebElement eliminar = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[3]/div[3]/div/div[2]/div[1]/div/form/div[2]/div[3]/div[4]/div/div[1]/div/div/div[2]/div[1]/span[2]/span/input"));
+            eliminar.click();
+            System.out.println("Dio click en eliminar");
+            TimeUnit.SECONDS.sleep(3);
+
+        } catch (
+                Exception e) {
+            System.out.println("Fallo dando click al boton eliminar");
+            driver.close();
+        }
     }
+
     public void validar(WebDriver driver){
         //Se verifica que haya agregado el producto al carrito, si llego hasta aqui la prueba es exitosa
         try{
+            WebElement listas = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[3]/div[3]/div/div[2]/div[1]/div/form/div[2]/div[3]/div[4]/div/div[1]/div/div/div[2]/ul/li[1]/span/a/span[1]/span/span[2]"));
+            // /html/body/div[1]/div/div/div/div/div[1]/span
             TimeUnit.SECONDS.sleep(3);
-            WebElement agregar = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[8]/div[4]/div[4]/div[1]/div/h1/span[1]"));
-
-            WebElement nombreProducto = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[3]/div[3]/div/div[2]/div[1]/div/form/div[2]/div[3]/div[4]/div/div[1]/div/div/div[1]/a/img"));
-            assertEquals("Aurora - Galactic Cuties - 8\" Light Up Alien Twitch", nombreProducto.getText());
+            listas = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div[3]/div[3]/div/div[2]/div[1]/div/form/div[2]/div[3]/div[4]/div/div[1]/div/div/div[2]/ul/li[1]/span/a/span[1]/span/span[2]"));
+            assertEquals("Aurora - Galactic Cuties - 8\" Light Up Alien Twitch", listas.getText());
         }catch (Exception e){
             System.out.println("Fallo validando el texto");
             driver.close();
+
         }
-
-
+        try {
+            WebElement amazon = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[1]/div[1]/a"));
+            //click en Amazon
+            amazon.click();
+        } catch (Exception e) {
+            System.out.println("No pudo dar click en el boton de Amazon");
+            driver.close();
         }
     }
+}
+
+
+
+
 

@@ -31,7 +31,8 @@ public class listasPersonalizadas {
             //elegir un nuevo nombre
             rellenar.sendKeys(Keys.CONTROL, "a");
             rellenar.sendKeys(Keys.DELETE);
-            rellenar.sendKeys("Compras grupo");
+            TimeUnit.SECONDS.sleep(4);
+            rellenar.sendKeys("Calidad del software grupo 8");
             TimeUnit.SECONDS.sleep(3);
         } catch (Exception e) {
             System.out.println("Fallo ingresando el nuevo nombre");
@@ -45,29 +46,22 @@ public class listasPersonalizadas {
             System.out.println("No pudo dar click en el boton de crear una lista");
             driver.close();
         }
-        try {
-            WebElement amazon = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[1]/div[1]/a"));
-            //click en Amazon
-            amazon.click();
-        } catch (Exception e) {
-            System.out.println("No pudo dar click en el boton de Amazon");
-            driver.close();
+
+
         }
 
-    }
 
     public void validar(WebDriver driver){
-
-        //Se verifica que se haya creado la lista personalizada, si llego hasta aqui la prueba es exitosa
         try{
-            WebElement compras = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/ul/li[1]/a"));
-
+            WebElement listas = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div/div/div/div[1]/div/div[2]/a/div/div[1]/div[1]/span"));
+            // /html/body/div[1]/div/div/div/div/div[1]/span
             TimeUnit.SECONDS.sleep(3);
-            compras = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/ul/li[1]/a"));
-            assertEquals("Compras grupo", compras.getText());
+            listas = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div/div/div/div[1]/div/div[2]/a/div/div[1]/div[1]/span"));
+            assertEquals("Calidad del software grupo 8", listas.getText());
         }catch (Exception e){
             System.out.println("Fallo validando el texto");
             driver.close();
+
         }
         try {
             WebElement amazon = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[1]/div[1]/a"));

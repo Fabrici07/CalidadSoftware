@@ -56,6 +56,7 @@ public class modificarDatos {
             rellenar.click();
             rellenar.sendKeys(Keys.CONTROL, "a");
             rellenar.sendKeys(Keys.DELETE);
+            TimeUnit.SECONDS.sleep(4);
             rellenar.sendKeys("Carlos Zumbado Cárdenas");
         } catch (Exception e) {
             System.out.println("Fallo ingresando el nuevo nombre");

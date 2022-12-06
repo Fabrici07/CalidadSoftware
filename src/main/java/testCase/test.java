@@ -108,14 +108,6 @@ public class test {
             System.out.println("Fallo ingresando al login");
             driver.close();
         }
-        eliminarCarrito eliminar = new eliminarCarrito();
-
-        try {
-            eliminar.ingresarPantalla(driver);
-        } catch (Exception e) {
-            System.out.println("Fallo ingresando al login");
-            driver.close();
-        }
 
         try {
             driver.close();
