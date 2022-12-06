@@ -23,7 +23,7 @@ public class iniciarSesion {
         try{
             WebElement correo = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div[1]/form/div/div/div/div[1]/input[1]"));
             //Ingresar un correo registrado en amazon
-            correo.sendKeys("CREAR SU CORREO DE AMAZON");
+            correo.sendKeys("carloszumbadocardenas@gmail.com");
         }catch (Exception e){
             System.out.println("Fallo ingresando el correo");
             driver.close();
@@ -38,7 +38,7 @@ public class iniciarSesion {
         try{
             WebElement contraseña = driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div/form/div/div[1]/input"));
             //Ingresar la contraseña de la cuenta de amazon
-            contraseña.sendKeys("CREAR SU CONTRASEÑA DE AMAZON");
+            contraseña.sendKeys("carlosz.c0699");
         }catch (Exception e){
             System.out.println("Fallo ingresando la contraseña");
             driver.close();

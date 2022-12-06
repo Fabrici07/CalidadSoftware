@@ -14,7 +14,7 @@ public class modificarDatos {
             Actions action = new Actions(driver);
             action.moveToElement(menu).perform();
         } catch (Exception e) {
-            System.out.println("Fallo ingresando a la pantalla Todo");
+            System.out.println("Fallo ingresando a la pantalla Cuenta y Listas");
             driver.close();
         }
         try {
@@ -54,7 +54,6 @@ public class modificarDatos {
             WebElement rellenar = driver.findElement(By.xpath("/html/body/div[3]/div/div/div/form/div[1]/input[3]"));
             //elegir un nuevo nombre
             rellenar.click();
-            rellenar.sendKeys(Keys.CONTROL, "a");
             rellenar.sendKeys(Keys.CONTROL, "a");
             rellenar.sendKeys(Keys.DELETE);
             rellenar.sendKeys("Carlos Zumbado Cárdenas");

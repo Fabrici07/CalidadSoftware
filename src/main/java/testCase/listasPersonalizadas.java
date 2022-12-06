@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
 public class listasPersonalizadas {
     public void ingresaPantalla(WebDriver driver) {
         try {
-            WebElement menu = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/a[2]/div/span"));
+            WebElement menu = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[3]/div/a[2]"));
             Actions action = new Actions(driver);
             action.moveToElement(menu).perform();
         } catch (Exception e) {
@@ -44,26 +44,35 @@ public class listasPersonalizadas {
         } catch (Exception e) {
             System.out.println("No pudo dar click en el boton de crear una lista");
             driver.close();
-
+        }
+        try {
+            WebElement amazon = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[1]/div[1]/a"));
+            //click en Amazon
+            amazon.click();
+        } catch (Exception e) {
+            System.out.println("No pudo dar click en el boton de Amazon");
+            driver.close();
         }
 
-        }
-
+    }
 
     public void validar(WebDriver driver){
-        //Se verifica que haya enviado a la pantalla de verificar email, si llego hasta aqui la prueba es exitosa
+
+        //Se verifica que se haya creado la lista personalizada, si llego hasta aqui la prueba es exitosa
         try{
+            WebElement compras = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/ul/li[1]/a"));
+
             TimeUnit.SECONDS.sleep(3);
-            WebElement nombreLista = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div/div/div/div/div[2]/div[5]/div/div/div/div[1]/span[1]"));
-            assertEquals("Compras grupo", nombreLista.getText());
+            compras = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/ul/li[1]/a"));
+            assertEquals("Compras grupo", compras.getText());
         }catch (Exception e){
             System.out.println("Fallo validando el texto");
             driver.close();
         }
         try {
-            WebElement inicio = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[1]/div[1]/a"));
+            WebElement amazon = driver.findElement(By.xpath("/html/body/div[1]/header/div/div[1]/div[1]/div[1]/a"));
             //click en Amazon
-            inicio.click();
+            amazon.click();
         } catch (Exception e) {
             System.out.println("No pudo dar click en el boton de Amazon");
             driver.close();
