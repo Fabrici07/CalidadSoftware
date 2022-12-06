@@ -28,7 +28,7 @@ Despues creamos el proyecto en el IDE elegido y procedimos a configurar el pom c
 Luego, movimos el driver de Chrome a los recursos del proyecto para poder ser utilizado, seguidamente importamos las librerias necesarias para el framework inicial y por último creamos el framework el cual consta de su inicialización que permite abrir el navegador automáticamente , despues se dirige al buscador y escribe lo que hemos configurado por el momento lo cual es "Calidad del Software Automatización de Pruebas".
 
 
-Es importante recordar que este framework es solo un pequeño paso para la automatización de las pruebas y es solo para mostrar que el entorno en el que se realizarán los casos de prueba es funcional y está bien configurado
+Es importante recordar que este framework es solo un pequeño paso para la automatización de las pruebas y es solo para mostrar que el entorno en el que se realizarán los casos de prueba es funcional y está bien configurado.
 
 
 
